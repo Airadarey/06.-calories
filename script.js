@@ -54,11 +54,11 @@ function countCaloriesFemale(weigth, height, age) {
 countBtn.addEventListener('click', (event) => {
     event.preventDefault();
     outputBox.classList.remove('hidden');
-    if (!maleInput.checked || weigthInput.value != '' || heightInput.value != '' || ageInput.value != '') {
+    if (maleInput.checked && weigthInput.value != '' && heightInput.value != '' && ageInput.value != '') {
         let maleResult = countCaloriesMale(weigthInput, heightInput, ageInput);
         outputText.innerHTML = `Ваша норма калорий: ${maleResult}`;
     }
-    else if (!femaleInput.checked || weigthInput.value != '' || heightInput.value != '' || ageInput.value != '') {
+    else if (femaleInput.checked && weigthInput.value != '' && heightInput.value != '' && ageInput.value != '') {
         let femaleResult = countCaloriesFemale(weigthInput, heightInput, ageInput);
         outputText.innerHTML = `Ваша норма калорий: ${femaleResult}`;
     } else {
