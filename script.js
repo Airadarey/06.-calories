@@ -54,18 +54,16 @@ function countCaloriesFemale(weigth, height, age) {
 countBtn.addEventListener('click', (event) => {
     event.preventDefault();
     outputBox.classList.remove('hidden');
-    activeList.forEach(item => {
-        if (!maleInput.checked || weigthInput.value != '' || heightInput.value != '' || ageInput.value != '' || !item.checked) {
-            let maleResult = countCaloriesMale(weigthInput, heightInput, ageInput);
-            outputText.innerHTML = `Ваша норма калорий: ${maleResult}`;
-        }
-        else if (!femaleInput.checked || weigthInput.value != '' || heightInput.value != '' || ageInput.value != '' || !item.checked) {
-            let femaleResult = countCaloriesFemale(weigthInput, heightInput, ageInput);
-            outputText.innerHTML = `Ваша норма калорий: ${femaleResult}`;
-        } else {
-            outputText.innerHTML = `Недостаточно данных`;
-        }
-    })
+    if (!maleInput.checked || weigthInput.value != '' || heightInput.value != '' || ageInput.value != '') {
+        let maleResult = countCaloriesMale(weigthInput, heightInput, ageInput);
+        outputText.innerHTML = `Ваша норма калорий: ${maleResult}`;
+    }
+    else if (!femaleInput.checked || weigthInput.value != '' || heightInput.value != '' || ageInput.value != '') {
+        let femaleResult = countCaloriesFemale(weigthInput, heightInput, ageInput);
+        outputText.innerHTML = `Ваша норма калорий: ${femaleResult}`;
+    } else {
+        outputText.innerHTML = `Недостаточно данных`;
+    }
 })
 
 clearBtn.addEventListener('click', (event) => {
