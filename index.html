@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счётчик калорий</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1 class="title">Счётчик калорий</h1>
+    <form action="" class="counter_form">
+        <div class="form_gender">
+            <h2 class="form_title">Пол</h2>
+            <div class="btn_box">
+                <div class="form_text">
+                    <input id="male" name="gender" value="male" type="radio">
+                    <label for="male">Мужской</label>
+                </div>
+                
+                <div class="form_text">
+                    <input id="female" name="gender" value="female" type="radio">
+                    <label for="female">Женский</label>
+                </div>
+            </div>
+        </div>
+        <div class="form_info">
+            <div class="form_info_box">
+                <h3 class="form_title">Возраст <span>лет</span></h3>
+                <p class="info_input">
+                    <input id="age" type="text" placeholder="0">
+                </p>
+            </div>
+            <div class="form_info_box">
+                <h3 class="form_title">Рост <span>см</span></h3>
+                <p class="info_input">
+                    <input id="height" type="text" placeholder="0">
+                </p>
+            </div>
+            <div class="form_info_box">
+                <h3 class="form_title">Вес <span>кг</span></h3>
+                <p class="info_input">
+                    <input id="weigth" type="text" placeholder="0">
+                </p>
+            </div>
+        </div>
+        <div class="form_active">
+            <h2 class="form_title">Физическая активность</h2>
+            <div class="active_box">
+                <p class="active_checkbox">
+                    <input id="min_active" type="radio" name="active" id="0">Минимальная</p>
+                <p class="primary_text">Сидячая работа и нет физических нагрузок</p>
+            </div>
+            <div class="active_box">
+                <p class="active_checkbox">
+                    <input id="low_active" type="radio" name="active" id="0">Низкая</p>
+                <p class="primary_text">Редкие, нерегулярные тренировки, активность в быту</p>
+            </div>
+            <div class="active_box">
+                <p class="active_checkbox">
+                    <input id="middle_active" type="radio" name="active" id="0">Средняя</p>
+                <p class="primary_text">Тренировки 3-5 раз в неделю</p>
+            </div>
+            <div class="active_box">
+                <p class="active_checkbox">
+                    <input id="high_active" type="radio" name="active" id="0">Высокая</p>
+                <p class="primary_text">Тренировки 6-7 раз в неделю</p>
+            </div>
+            <div class="active_box">
+                <p class="active_checkbox">
+                    <input id="max_active"  type="radio" name="active" id="0">Очень высокая</p>
+                <p class="primary_text">Больше 6 тренировок в неделю и физическая нагрузка</p>
+            </div>
+        </div>
+        <div class="button_box">
+            <button class="count">Рассчитать</button>
+            <button class="clear">Очистить поля и расчёт</button>
+        </div>
+    </form>
+    <div class="output_box hidden">
+        <p id="output_text" class="output_text"></p>
+    </div>
+</body>
+</html>
